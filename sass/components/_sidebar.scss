@@ -1,0 +1,60 @@
+.side-nav {
+  font-size: 1.4rem;
+  margin-top: 3.5rem;
+
+  &_item {
+    list-style: none;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &_item::before {
+    content: '';
+    background-color: $color-Primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s 0.2s;
+  }
+
+  &_item:hover::before,
+  &_item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &_link {
+    &:visited,
+    &:link {
+      text-decoration: none;
+      color: $color-Grey-light-1;
+      text-transform: uppercase;
+      display: block;
+      padding: 1.5rem 3rem;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &_icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor;
+  }
+}
+
+.legal {
+  font-size: 1.2rem;
+  color: $color-Grey-light-4;
+  padding: 2.5rem;
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	//Defines what is 1 rem : 10px
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'open Sans', sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+	color: $color-Grey-dark-2;
+	background-image: linear-gradient(to right bottom, $color-Primary-light, $color-Primary-dark);
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	width: 100%;
+}
